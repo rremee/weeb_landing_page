@@ -1,0 +1,14 @@
+@import url("reset.css");
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    background-color: #0F172A;
+    color: #fff;
+}
+
+[class*="__container"] {
+    max-inline-size: 1310px; /* 1280 + 15 + 15 = 1310 */
+    margin-inline: auto;
+    padding-inline: 15px;
+}
