@@ -91,6 +91,22 @@
         border: 5px solid #c2410c;
     }
 }
+.block-header__background {
+    position: relative;
+    span {
+        position: relative;
+        z-index: 3;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 23%;
+        left: -10px;
+        top: 0;
+        background-color: #BE185D;
+    }
+}
 .block-header__line {
     position: relative;
     &::before {

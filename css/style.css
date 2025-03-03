@@ -375,3 +375,38 @@ body {
 		justify-items: center;
 	}
 }
+
+
+/* ----------------- Customers ----------------- */
+.customers__container {
+	display: grid;
+	align-items: start;
+	grid-template-columns: 1fr 22.1875%; /* 284/1280 */
+	column-gap: 80px;
+	row-gap: 48px;
+}
+.customers__media {
+	padding-top: 38px;
+}
+.customers__image {
+	max-width: 100%;
+}
+
+@media (max-width: 991.98px) {
+    .customers__container {
+		column-gap: 40px;
+	}
+}
+@media (max-width: 767.98px) {
+    .customers__container {
+		justify-items: center;
+		grid-template-columns: auto;
+	}
+	.customers__block-header {
+		text-align: center;
+		justify-items: center;
+	}
+	.customers__block-header .block-header__link {
+		justify-self: center;
+	}
+}
