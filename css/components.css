@@ -231,3 +231,25 @@
         align-items: stretch;
     }
 }
+
+.link-event {
+    background: url("../img/events/arrow_right--purple.svg") right no-repeat;
+    padding-right: 35px;
+    color: #9333ea;
+    span {
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            width: 0%;
+            height: 2px;
+            left: 0;
+            bottom: 0;
+            background-color: #9333ea;
+            transition: .5s width;
+        }
+    }
+    &:hover span::after {
+        width: 100%;
+    }
+}
