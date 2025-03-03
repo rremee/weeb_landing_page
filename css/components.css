@@ -215,10 +215,13 @@
 }
 @media (max-width: 550.98px) {
     .block-header__line::before {
-        height: 5px;
+        height: 4px;
     }
 	.block-header__line--bottom::before {
         display: none;
+    }
+	.testimonials__block-header .block-header__line--bottom::before {
+        display: block;
     }
 }
 
