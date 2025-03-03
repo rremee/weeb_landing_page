@@ -38,11 +38,22 @@
     }
 }
 
+/* ------------- Label ------------- */
+.label {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+.label--margin {
+    margin-bottom: 16px;
+}
 /* ------------- Title ------------- */
 .title {
     font-size: 56px;
     font-weight: 800;
     line-height: 1.1;
+    text-wrap: balance;
 }
 .title--center {
     text-align: center;
@@ -50,8 +61,11 @@
 .block-header {
     display: grid;
     gap: 32px;
+}
+.block-header--center {
     justify-content: center;
 }
+
 .block-header__title {
     font-size: 72px;
     line-height: 1.1;
@@ -59,6 +73,22 @@
     text-wrap: balance;
     span {
         display: inline-block;
+    }
+}
+.block-header__border {
+    position: relative;
+    span {
+        position: relative;
+        z-index: 3;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 96%;
+        left: -10px;
+        top: 0;
+        border: 5px solid #c2410c;
     }
 }
 .block-header__line {
@@ -88,9 +118,13 @@
 .block-header__purple {
     color: #9333ea;
 }
+.block-header__light-purple {
+    color: #C084FC;
+}
 .block-header__text {
     max-width: 760px;
     line-height: 1.6;
+    text-wrap: balance;
 }
 .block-header__buttons {
     display: flex;
@@ -99,6 +133,28 @@
     row-gap: 7px;
     justify-content: center;
     align-items: center;
+}
+
+.block-header__link {
+    justify-self: start;
+    padding-right: 34px;
+    background: url("../icons/arrow--right.svg") right no-repeat;
+    span {
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            width: 0%;
+            height: 2px;
+            left: 0;
+            bottom: 0;
+            background-color: #9333ea;
+            transition: .5s width;
+        }
+    }
+    &:hover span::after {
+        width: 100%;
+    }
 }
 
 @media (max-width: 991.98px) {
@@ -114,10 +170,16 @@
     .title {
         font-size: 48px;
     }
+    .block-header__border {
+        &::before {
+            left: -7px;
+            border: 4px solid #c2410c;
+        }
+    }
 }
 @media (max-width: 767.98px) {
     .block-header__title {
-        font-size: 54px;
+        font-size: 44px;
     }
     .block-header__line::before {
         height: 3px;
@@ -127,6 +189,12 @@
     }
     .title {
         font-size: 40px;
+    }
+    .block-header__border {
+        &::before {
+            left: -5px;
+            border: 3px solid #c2410c;
+        }
     }
 }
 @media (max-width: 550.98px) {
