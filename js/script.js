@@ -7,6 +7,8 @@ let documentActions = (e) => {
 	}
 };
 
+document.addEventListener("click", documentActions);
+
 const options = {
 	root: null,
 	rootMargin: "0px 0px 0px 0px",

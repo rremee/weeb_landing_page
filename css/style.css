@@ -657,8 +657,6 @@ body {
 }
 .footer__body {
 	padding-block: 48px;
-	/* display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
